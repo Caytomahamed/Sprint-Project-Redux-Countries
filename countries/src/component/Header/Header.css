@@ -1,0 +1,86 @@
+
+.header {
+  height: 70rem;
+  background: linear-gradient(45deg,#b95ce4,#4f29cd);
+  background-size: cover; 
+  background-position: top;
+  clip-path: polygon(0 0,100% 0,100% 75%,0 100%);
+}
+
+.logo-box {
+  position: absolute;
+  top: 1rem;
+  left: 6rem;
+  font-size: 10rem;
+}
+.logo{
+  height: 8rem;
+  color: white;
+}
+
+.text-box{
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-35%, -50%);
+  text-align: center;
+}
+
+.heading-primary{
+ color: #ffffff;
+ text-transform: uppercase;
+ backface-visibility: hidden;
+ margin-bottom: 6rem;
+}
+
+.heading-primary-main{
+  display: block;
+  font-size: 6rem;
+  font-weight: 500;
+  letter-spacing: 1rem;
+  animation: moveLeft 1s ease-out;
+}
+.heading-primary-sub{
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1.75rem;
+  animation:moveRight 1s ease-out;
+}
+
+@keyframes moveLeft {
+  0%{
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+   80%{
+    transform: translateX(1rem);
+  } 
+  100%{
+    opacity: 1; 
+    transform: translate(0);
+  }
+}
+@keyframes moveRight {
+  0%{
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+   80%{
+    transform: translateX(-1rem);
+  } 
+  100%{
+    opacity: 1; 
+    transform: translate(0);
+  }
+}
+@keyframes moveButtom {
+  0%{
+    opacity: 0;
+    transform: translateY(3rem);
+  } 
+  100%{
+    opacity: 1; 
+    transform: translate(0);
+  }
+}

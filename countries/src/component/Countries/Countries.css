@@ -1,0 +1,33 @@
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+.u-center{
+  text-align: center !important;
+}
+ .sub-title{
+  text-transform: uppercase;
+  font-size: 40px;
+  letter-spacing: 3px;
+  font-weight: 400;
+  display: inline-block;
+  margin-top: 30px;
+  background: linear-gradient(45deg,#b95ce4,#4f29cd);
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: all .3s;
+}
+
+.sub-title:hover{
+  transform: skew(2deg,3deg);
+  text-shadow: 0 5px 5px rgba(0, 0, 0, .2);
+}
+.card-box {
+  margin: 0 auto;
+  max-width: 1600px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 40px 0;
+}

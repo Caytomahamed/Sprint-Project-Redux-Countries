@@ -1,0 +1,47 @@
+.card{
+  position: relative;
+  width: 240px;
+  height: 300px;
+  box-shadow: inset 3px 3px 1px rgba(0,0,0,.05),
+              inset -3px -3px 1px rgba(0,0,0,.05),
+              3px 3px 10px rgba(0,0,0,.05),
+              -3px -3px 10px rgba(0,0,0,.05);
+  margin: 30px;
+  border-radius: 8px;
+  backface-visibility: hidden;
+}
+.card:hover .box{
+  transform: translateY(-50px);
+  background: linear-gradient(45deg,#b95ce4,#4f29cd);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, .2);
+}
+.card:hover .box .content {
+  color: #fff;
+}
+.box{
+ position: absolute;
+ top: 20px;
+ left: 20px;
+ right: 20px;
+ bottom: 20px;
+ box-shadow: 0 10px 20px rgba(0,0,0,.1);
+display: flex;
+justify-content: center;
+align-items: center;
+/* padding: 12px; */
+transition: all .5s;
+border-radius: 8px;
+background: #fff;
+
+}
+.content {
+  padding: 0px;
+  line-height: 1.7;
+  color: rgba(0, 0, 0, 0.733);
+  border-radius: 8px;
+  padding: 10px;
+
+}
+.content h2{
+  font-size: 25px;
+}
