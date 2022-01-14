@@ -1,12 +1,12 @@
 .card{
   position: relative;
-  width: 240px;
+  width: 250px;
   height: 300px;
   box-shadow: inset 3px 3px 1px rgba(0,0,0,.05),
               inset -3px -3px 1px rgba(0,0,0,.05),
               3px 3px 10px rgba(0,0,0,.05),
               -3px -3px 10px rgba(0,0,0,.05);
-  margin: 30px;
+  margin: 20px;
   border-radius: 8px;
   backface-visibility: hidden;
 }

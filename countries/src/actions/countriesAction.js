@@ -8,7 +8,7 @@ export const EROR = "EROR";
 export const ADD = "ADD";
 
 //ACTION CRAETOR
-export const FechData = () => (dispatch) => {
+export const FechData = (newCountry) => (dispatch) => {
   // Start
   dispatch({ type: START });
 
@@ -17,15 +17,17 @@ export const FechData = () => (dispatch) => {
       dispatch({ type: SUCCESS, payload: res.data });
     })
     .catch((erro) => {
-      dispatch({ type: EROR, payload: erro.erro });
+      dispatch({ type: EROR, payload: erro.message });
     });
+    
+  // ADD NEW 
+   axios.post("http://localhost:3333/countries", newCountry).then((res) => {
+     dispatch({
+       type: ADD,
+       payload: res.data,
+     });
+     
+   });
  
 };
 
-export  const AddCountry = (newCountry) => {
-    return {
-     type : ADD ,
-     payload : newCountry
-    }
-    
-}  

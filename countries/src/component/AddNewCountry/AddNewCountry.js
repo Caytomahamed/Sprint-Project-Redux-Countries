@@ -1,7 +1,8 @@
 import axios from "axios";
 import React, { useState } from "react";
 import './AddNewCountry.css'
-import { AddCountry } from "../../actions/countriesAction";
+import { FechData } from "../../actions/countriesAction";
+import { useDispatch } from "react-redux";
 
 function AddNewCountry() {
   // 1. Set up state for form
@@ -12,6 +13,8 @@ function AddNewCountry() {
     land_area: "",
   };
 
+  const dispatch = useDispatch()
+  
   const [form, setForm] = useState(initialState);
   console.log(form);
   // 2. Create "handleChange" function to handle form changes and add changes to above state
@@ -25,10 +28,8 @@ function AddNewCountry() {
   // Make sure to update your countries list to show the recently added country.
 
   const handleSubmit = (event) => {
-    // event.preventDefault();
-    axios.post("http://localhost:3333/countries", form).then((res) => {
-    
-    });
+    event.preventDefault();
+    dispatch(FechData(form))
     setForm(initialState);
   };
   return (
@@ -36,6 +37,7 @@ function AddNewCountry() {
       <div className="container form-box">
         <div className="form-bg">
           <form onSubmit={handleSubmit} id="form">
+            <h3 className="sub-title2">add new country</h3>
             <label htmlFor="label">
               Name
               <input
@@ -69,7 +71,7 @@ function AddNewCountry() {
               />
             </label>
 
-            <button class="btn btn-gradient btn-animated">submit</button>
+            <button class="btn btn-gradient btn-animated btn-submit">submit</button>
           </form>
         </div>
       </div>

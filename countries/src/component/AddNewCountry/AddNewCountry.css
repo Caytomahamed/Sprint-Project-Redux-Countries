@@ -1,21 +1,21 @@
-
-.form-component{
+.form-component {
   background: #b95ce4;
   padding: 100px 30px;
 }
-.form-box{
-  background: url('./image.jpg');
+.form-box {
+  background: url("./image.jpg");
   width: 100%;
-  height: 47rem;
+  height: 50rem;
   background-size: cover;
-
 }
-.form-bg{
+.form-bg {
   display: block;
   background: linear-gradient(
-    120deg,rgba(255, 255, 255, 0.9) 0%,
-    rgba(255, 255, 255, 0.9)  
-    50%,transparent 50%);
+    120deg,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(255, 255, 255, 0.9) 50%,
+    transparent 50%
+  );
 
   width: 100%;
   height: 100%;
@@ -26,30 +26,47 @@ form {
   width: 50%;
   height: 100%;
   padding: 60px;
+  
 }
-label{
+.sub-title2 {
+  text-transform: uppercase;
+  font-size: 26px;
+  letter-spacing: 3px;
+  font-weight: 400;
+  display: inline-block;
+  transform: translateY(-10px);
+  background: linear-gradient(45deg, #b95ce4, #4f29cd);
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: all 0.3s;
+}
+
+.sub-title2:hover {
+  transform: skew(2deg, 3deg) translateY(-10px);
+  text-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+label {
   display: block;
   margin-top: 20px;
 }
-input{
-  width: 55%;
+input {
+  width: 65%;
   display: block;
   padding: 1.2rem 2rem;
-  margin-top: 10px;
+  margin-top: 5px;
   border: none;
-  background: rgba(255, 255, 255, 0.6) ;
+  background: rgba(255, 255, 255, 0.6);
   color: rgba(0, 0, 0, 0.534);
   font-size: 16px;
-  transition: all .4s;
+  transition: all 0.4s;
   border-bottom: 3px solid transparent;
- 
+  
 }
-input:focus{
+input:focus {
   outline: none;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, .1);
-
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
 }
 
-input:focus:placeholder-shown{
+input:focus:placeholder-shown {
   border-bottom: 3px solid #4f29cd;
 }

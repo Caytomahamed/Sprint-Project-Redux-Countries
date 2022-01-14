@@ -77,7 +77,9 @@ body{
   z-index: -1;
   transition: all .4s;
 }
-
+.btn-submite {
+  padding-bottom: 1rem;
+}
 .btn-animated {
   animation: moveButtom 1s ease-out .75s;
   animation-fill-mode: backwards;
