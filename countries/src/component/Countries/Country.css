@@ -45,3 +45,21 @@ background: #fff;
 .content h2{
   font-size: 25px;
 }
+
+.icon-box {
+  display: flex;
+  justify-content: flex-end;
+  transform: translateY(2rem);
+}
+.icon-box button {
+  width: 3.5rem;
+  height: 3.5rem;
+  font-size: 1.6rem;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.icon-box button:not(:last-child){
+  margin-right: 5px;
+}
