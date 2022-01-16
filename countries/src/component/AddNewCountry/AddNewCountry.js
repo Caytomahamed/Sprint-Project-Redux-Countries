@@ -16,22 +16,23 @@ function AddNewCountry() {
   const dispatch = useDispatch()
   
   const [form, setForm] = useState(initialState);
-  console.log(form);
   // 2. Create "handleChange" function to handle form changes and add changes to above state
-
+  const country = form
   const handleChange = (event) => {
     const text = { ...form, [event.target.name]: event.target.value };
-
     setForm(text);
+   
   };
   // 3. Create "handleSubmit" function to send data to http://localhost:3333/countries using POST request.
   // Make sure to update your countries list to show the recently added country.
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
     dispatch(FechData(form))
     setForm(initialState);
   };
+  
   return (
     <div className="form-component">
       <div className="container form-box">
