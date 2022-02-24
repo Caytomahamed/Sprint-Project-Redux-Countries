@@ -1,22 +1,33 @@
-import React, { Component } from 'react';
+import React, { useEffect }  from 'react';
+import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
+import { FechData } from './actions/countriesAction';
 import './App.css';
+import AddNewCountry from './component/AddNewCountry/AddNewCountry';
+import Countries from './component/Countries/Countries';
+import Header from './component/Header/Header';
+
 /*
  to wire this component up you're going to need a few things.
  I'll let you do this part on your own. 
  Just remember, `how do I `connect` my components to redux?`
  `How do I ensure that my component links the state to props?`
  */
-class App extends Component {
-  render() {
+const  App = () =>  {
+    const countries = useSelector((state) => state.countries)
+
+    const dispatch = useDispatch();
+    useEffect(() => {
+      const data = dispatch(FechData())
+    })
+   
     return (
       <div className="App">
-        <h1>COUNTRIES! W/ Redux</h1>
-        <div>Welcome to your Redux Sprint Project</div>
-        <div>Start inside of your `src/index.js` file!</div>
-        <div>Have fun!</div>
+        <Header/>
+        <Countries/>
+        <AddNewCountry/>
       </div>
     );
   }
-}
 
 export default App;

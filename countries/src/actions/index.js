@@ -10,6 +10,6 @@
      the "pending" states like, fetching, creating, updating and deleting.
    C - addCountry
    R - getCountries
-   U - updateCountry
+   U - updateCountryv
    D - deleteCountry
 */

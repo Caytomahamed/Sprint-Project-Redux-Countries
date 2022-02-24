@@ -1,28 +1,86 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box ;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+html {
+  font-size: 62.25%;
+  scroll-behavior: smooth;
 }
-
-.App-header {
-  background-color: #222;
-  height: 150px;
+body{
+  font-family: "lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #777;
   padding: 20px;
-  color: white;
+  font-size: 1.6rem;
 }
 
-.App-title {
-  font-size: 1.5em;
+.btn,
+.btn:link,
+.btn:visited{
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  padding: 1.5rem 4rem;
+  border-radius: 10rem;
+  position: relative;
+  transition: all .3s;
+  font-size: 1.6rem;
+  border: none;
+  
 }
 
-.App-intro {
-  font-size: large;
+.btn:hover{
+  transform: translatey(-3px);
+  box-shadow: 0px 1rem 2rem rgba(0,0,0,.2);
+}
+.btn:active{
+  transform: translateY(-1px);
+  box-shadow: 0px 0.5rem 1rem rgba(0,0,0,.2);
+  outline: none;
+}
+.btn-white{
+  background-color: #ffffff;
+  color: #777;
+}
+.btn-white::after{
+  background-color: #ffffff;  
+}
+.btn-white:hover::after{
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.btn-gradient{
+  background: linear-gradient(45deg,#b95ce4,#4f29cd);
+  color: #fff;
+  margin-top: 1.5rem;
+}
+.btn-gradient::after{
+  background: linear-gradient(45deg,#b95ce4,#4f29cd); 
+}
+.btn-gradient:hover::after{
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn::after{
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s;
+}
+.btn-submite {
+  padding-bottom: 1rem;
+}
+.btn-animated {
+  animation: moveButtom 1s ease-out .75s;
+  animation-fill-mode: backwards;
 }
